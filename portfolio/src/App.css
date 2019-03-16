@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0E0F11;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.App {
+  width: 1200px;
+  background-color: yellow;
+}
+
+.App::after {
+  bottom: -20px;
+  height: 30px;
+  width: 30px;
+  left: 40px;
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid white;
+  filter: drop-shadow(0 0 8px #fff);
+}
+
+/* /img/15.jpg */
