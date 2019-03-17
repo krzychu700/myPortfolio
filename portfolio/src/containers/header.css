@@ -1,17 +1,20 @@
-.headerSection {
-  /* width: 900px; */
-  height: 800px;
+.headerSectionFix {
   position: relative;
+  width: 1200px;
+  height: 800px;
+}
+
+.headerSection {
+  width: 1200px;
+  height: 645px;
+  position: fixed;
+  top: 60px;
   display: flex;
   justify-content: center;
-  margin: 10px 0;
+  margin-bottom: 52px;
+  /* margin: 30px 0; */
   background-color: black;
-  background-image: url("/img/stars3.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  background-size: cover;
-  box-shadow: -4px -4px 5px 0px black;
+  /* box-shadow: -4px -4px 5px 0px black; */
 }
 
 .headerSection::after {
@@ -22,14 +25,48 @@
   border-style: solid;
   border-width: 0 0 60px 1200px;
   border-color: transparent transparent black transparent;
-  box-shadow: -4px -10px 5px 0px black;
+  /* box-shadow: -4px -10px 5px 0px black; */
   bottom: -8%;
-  z-index: 1;
+  z-index: 6;
+}
+
+.scrollArea {
+  position: absolute;
+  width: 1200px;
+  height: 698px;
+  top: 0;
+  z-index: 5;
+  background-color: black;
+  opacity: 0;
+  filter: grayscale(0);
+}
+
+.nightSkyPic {
+  position: absolute;
+  left: 0;
+  width: 1200px;
+  height: 645px;
+  overflow: hidden;
+}
+
+.nightSky {
+  width: 2400px;
+  height: 575px;
+  position: absolute;
+  left: 0;
+  background-image: url("/img/stars3.jpg");
+  animation: rotateAnim;
+  animation-duration: 10000s;
+  animation-iteration-count: infinite;
+  background-size: contain;
+  animation-timing-function: linear;
 }
 
 .canvasSection {
   width: 1200px;
-  height: 800px;
+  height: 645px;
+  z-index: 2;
+  opacity: 0.9;
 }
 
 .canvasSection::after {
@@ -39,35 +76,116 @@
   border: 1px solid black;
   top: 0;
   width: 1200px;
-  height: 800px;
+  height: 645px;
 }
 
 canvas {
   width: 100%;
-  opacity: 0.7;
 }
 
 .bcgPicture {
   width: 1200px;
   position: absolute;
-  height: 800px;
-  /* overflow: hidden; */
+  height: 645px;
   bottom: -8%;
   display: flex;
   align-items: flex-end;
-  /* left: 50% */
 }
 
 .headerImg {
   width: 1200px;
   /* height: 300px; */
   object-fit: cover;
-  z-index: 2;
+  z-index: 4;
 }
 
-.nameText {
+.headerTextArea {
+  top: 10%;
+  left: 10%;
+  width: 678px;
+  flex-wrap: wrap;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.headerTextAreaPara {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nameText1 {
+  color: white;
+  max-width: 155px;
+  font-size: 40px;
+}
+
+.nameText2 {
+  max-width: 700px;
   color: white;
   font-size: 60px;
+  font-weight: bold;
+}
 
+.nameText3 {
+  max-width: 800px;
+  color: white;
+  font-size: 35px;
+}
+
+.cursor {
+  opacity: 0;
+  transition: 0.2s;
+  color: white;
+}
+
+.cursor.active {
+  opacity: 1;
+}
+
+.cursor1 {
+  font-size: 40px;
+}
+
+.cursor2 {
+  font-size: 60px;
+}
+
+.cursor3 {
+  font-size: 35px;
+}
+
+.hide {
+  display: none;
+}
+
+.arrowAnim {
+  position: absolute;
+  bottom: 3px;
+  color: white;
+  font-size: 30px;
+  z-index: 4;
+  animation: shakes 1s linear infinite;
+
+}
+
+@keyframes rotateAnim {
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: 1200%;
+  }
+}
+
+@keyframes shakes {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(10px);
+  }
 }

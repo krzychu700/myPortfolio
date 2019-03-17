@@ -2,7 +2,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
+  /* background-color: azure; */
+  position: fixed;
+  top: 0;
+  width: 1200px;
+  height: 40px;
+  z-index: 10;
 }
 
 .menuList {
@@ -12,7 +17,7 @@
 }
 
 .menuItem {
-  height: 50px;
+  height: 30px;
   width: 120px;
   background-color: red;
   display: flex;

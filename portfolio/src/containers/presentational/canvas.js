@@ -9,7 +9,7 @@ class Canvas extends Component {
     const ctx = canvas.getContext("2d");
 
     canvas.width = 1200;
-    canvas.height = 800;
+    canvas.height = 645;
 
     var starsHolder = [],
       FPS = 30,
