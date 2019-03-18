@@ -3,6 +3,7 @@ import "./App.css";
 import Menu from "../src/containers/menu";
 import Header from "../src/containers/header";
 import About from "../src/containers/about";
+import Skills from "../src/containers/skills";
 
 class App extends Component {
   constructor() {
@@ -14,19 +15,38 @@ class App extends Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll.bind(this));
+    this.menuNavigationScroll.bind(this);
   }
-  handleScroll(event) {
-    const aaa = window.pageYOffset;
-    console.log(aaa);
-    if (aaa > 100) {
+
+  handleScroll() {
+    const scrolPos = window.pageYOffset;
+    console.log(scrolPos);
+    if (scrolPos > 100) {
       this.setState({
-        scrolPos: aaa
+        scrolPos
       });
-    } else if (aaa < 100) {
+    } else if (scrolPos < 100) {
       this.setState({
         scrolPos: 0
       });
     }
+  }
+
+  menuNavigationScroll() {
+    (function navSmoothScrolling() {
+      const internalLinks = document.querySelectorAll('a[href^="#"]');
+      for (let i in internalLinks) {
+        if (internalLinks.hasOwnProperty(i)) {
+          internalLinks[i].addEventListener("click", e => {
+            e.preventDefault();
+            document.querySelector(internalLinks[i].hash).scrollIntoView({
+              block: "nearest",
+              behavior: "smooth"
+            });
+          });
+        }
+      }
+    })();
   }
 
   render() {
@@ -35,6 +55,7 @@ class App extends Component {
         <Menu menuStyle={this.state.scrolPos} />
         <Header headStyle={this.state.scrolPos} />
         <About aboutStyle={this.state.scrolPos} />
+        <Skills aboutStyle={this.state.scrolPos} />
       </div>
     );
   }

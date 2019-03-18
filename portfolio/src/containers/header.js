@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./header.css";
+import "./header.scss";
 import Canvas from "./presentational/canvas";
 
 class Header extends Component {

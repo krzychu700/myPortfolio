@@ -1,0 +1,67 @@
+@import "./presentational/_variables";
+
+.skillsSection {
+  width: 1200px;
+  height: 300px;
+  background-color: $col-primary;
+  position: relative;
+  color: $col-shining;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skillsSection::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 60px 0 0 1200px;
+  border-color: transparent transparent transparent $col-primary;
+  top: -20%;
+  z-index: 6;
+}
+
+.skillsSection::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 60px 1200px 0 0;
+  border-color: $col-primary transparent transparent transparent;
+  bottom: -20%;
+  z-index: 6;
+}
+
+.skillsTitle {
+  font-size: 60px;
+  margin: 30px 0;
+}
+
+.skillsAnim {
+  animation: fadein 5s;
+  width: 80%;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
