@@ -20,9 +20,20 @@ class Menu extends Component {
       >
         <ul className="menuList">
           <li className="menuItem">
-            <a href="#about">About</a>
+            <a className="menuLink" href="#home">
+              Home
+            </a>
           </li>
-          <li className="menuItem">Skills</li>
+          <li className="menuItem">
+            <a className="menuLink" href="#about">
+              About
+            </a>
+          </li>
+          <li className="menuItem">
+            <a className="menuLink" href="#skills">
+              Skills
+            </a>
+          </li>
           <li className="menuItem">Portfolio</li>
           <li className="menuItem">D</li>
           <li className="menuItem">E</li>

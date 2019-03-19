@@ -14,7 +14,8 @@ class About extends Component {
     return (
       <div className="aboutSectionFix" id="about">
         <div className="aboutSection">
-          <p className="aboutTitle">About me</p>
+          <p className="aboutTitle">ABOUT ME</p>
+          <span className="aboutUndeline" />
           <p
             className="aboutAnim"
             style={this.props.aboutStyle > 150 ? scrollChange : scrollDefault}

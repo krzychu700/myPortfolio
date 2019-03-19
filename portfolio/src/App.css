@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: 'Play', sans-serif;
 }
 
 body {
@@ -13,7 +15,7 @@ body {
 
 .App {
   width: 1200px;
-  height: 3200px;
+  /* height: 3200px; */
   /* background-color: yellow; */
 }
 

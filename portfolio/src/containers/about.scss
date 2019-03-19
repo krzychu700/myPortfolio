@@ -46,9 +46,15 @@
   margin: 30px 0;
 }
 
+.aboutUndeline {
+  @include undelineTitle
+}
+
 .aboutAnim {
-  animation: fadein 5s;
+  animation: fadein 5s linear;
   width: 80%;
+  margin-top: 20px;
+  text-align: justify;
 }
 
 @keyframes fadein {

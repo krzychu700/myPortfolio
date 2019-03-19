@@ -25,7 +25,7 @@ class Header extends Component {
     const spnCursor3 = this.refs.cursor3;
     const txt = "Hello,";
     const txt2 = "I'm Krzysztof Szypulski";
-    const txt3 = "Junior Front-end developer";
+    const txt3 = "< Junior Front-end developer />";
     let indexText = 0;
     let indexText2 = 0;
     let indexText3 = 0;
@@ -110,7 +110,7 @@ class Header extends Component {
       filter: "grayscale(0)"
     };
     return (
-      <div className="headerSectionFix">
+      <div className="headerSectionFix" id="home">
         <div className="headerSection">
           <div
             style={this.props.headStyle < 50 ? scrollDefault : scrollChange}
@@ -128,7 +128,7 @@ class Header extends Component {
                 }
                 ref="cursor"
               >
-                |
+                _
               </span>
             </div>
             <div className="headerTextAreaPara">
@@ -139,7 +139,7 @@ class Header extends Component {
                 }
                 ref="cursor2"
               >
-                |
+                _
               </span>
             </div>
             <div className="headerTextAreaPara">
@@ -150,7 +150,7 @@ class Header extends Component {
                 }
                 ref="cursor3"
               >
-                |
+                _
               </span>
             </div>
           </div>

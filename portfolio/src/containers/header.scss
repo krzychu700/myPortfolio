@@ -181,9 +181,11 @@ canvas {
 @keyframes shakes {
   from {
     transform: translateY(-10px);
+    opacity: 0;
   }
 
   to {
     transform: translateY(10px);
+    opacity: 1;
   }
 }

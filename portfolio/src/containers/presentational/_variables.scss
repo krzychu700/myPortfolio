@@ -1,6 +1,17 @@
 $col-primary: #0E0F11;
 $col-shining: #fff;
+$box-color: #212121;
 
 //header size
 $head-width: 1200px;
 $head-height: 645px;
+
+
+//Mixins
+@mixin undelineTitle {
+  position: absolute;
+  top: 120px;
+  width: 100px;
+  border: 2px solid #fff;
+  filter: drop-shadow(0 0 8px #fff);
+}

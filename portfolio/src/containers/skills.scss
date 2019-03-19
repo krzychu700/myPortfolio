@@ -2,7 +2,7 @@
 
 .skillsSection {
   width: 1200px;
-  height: 300px;
+  height: 1200px;
   background-color: $col-primary;
   position: relative;
   color: $col-shining;
@@ -20,7 +20,7 @@
   border-style: solid;
   border-width: 60px 0 0 1200px;
   border-color: transparent transparent transparent $col-primary;
-  top: -20%;
+  top: -60px;
   z-index: 6;
 }
 
@@ -32,7 +32,7 @@
   border-style: solid;
   border-width: 60px 1200px 0 0;
   border-color: $col-primary transparent transparent transparent;
-  bottom: -20%;
+  bottom: -60px;
   z-index: 6;
 }
 
@@ -41,9 +41,70 @@
   margin: 30px 0;
 }
 
+.skillIcon {
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.skillsUndeline {
+  @include undelineTitle;
+}
+
+.skillsUndeline--techSkills {
+  top: 1020px;
+}
+
+.svgBootstrap,
+.svgMongo,
+.svgRedux,
+.svgJQuery,
+.svgWebpack,
+.svgGit {
+  width: 200px;
+  height: 164px;
+}
+
 .skillsAnim {
   animation: fadein 5s;
-  width: 80%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.skillDescriptionArea {
+  width: 320px;
+  height: 230px;
+  background-color: $box-color;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 10px;
+  color: $col-shining;
+  animation: moveFromLeft 1s 2s both;
+}
+
+.skillDescriptionArea:nth-of-type(2),
+.skillDescriptionArea:nth-of-type(5),
+.skillDescriptionArea:nth-of-type(7) {
+  animation-delay: 3s;
+}
+
+.skillDescriptionArea:nth-of-type(3),
+.skillDescriptionArea:nth-of-type(6) {
+  animation-delay: 4s;
+}
+
+.skillTitle {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.skillDescription {
+  text-align: justify;
+  margin: 0 15px 15px 15px;
 }
 
 @keyframes fadein {
@@ -57,11 +118,22 @@
 }
 
 @keyframes fadeout {
-  from {
+  0% {
     opacity: 1;
   }
 
-  to {
+  100% {
     opacity: 0;
+  }
+}
+
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
   }
 }
