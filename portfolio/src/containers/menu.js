@@ -14,7 +14,7 @@ class Menu extends Component {
 
     return (
       <div
-        style={this.props.menuStyle < 50 ? scrollDefault : scrollChange}
+        style={this.props.scroll < 50 ? scrollDefault : scrollChange}
         className="menu"
         ref="menu"
       >

@@ -102,8 +102,8 @@ class Header extends Component {
 
   render() {
     const scrollChange = {
-      opacity: `${0 + this.props.headStyle / 698}`,
-      filter: `grayscale(${(2 * this.props.headStyle) / 698})`
+      opacity: `${0 + this.props.scroll / 698}`,
+      filter: `grayscale(${(2 * this.props.scroll) / 698})`
     };
     const scrollDefault = {
       opacity: `0`,
@@ -113,7 +113,7 @@ class Header extends Component {
       <div className="headerSectionFix" id="home">
         <div className="headerSection">
           <div
-            style={this.props.headStyle < 50 ? scrollDefault : scrollChange}
+            style={this.props.scroll < 50 ? scrollDefault : scrollChange}
             className="scrollArea"
           />
           <div className="nightSkyPic">

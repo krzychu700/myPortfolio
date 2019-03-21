@@ -18,7 +18,7 @@ class About extends Component {
           <span className="aboutUndeline" />
           <p
             className="aboutAnim"
-            style={this.props.aboutStyle > 150 ? scrollChange : scrollDefault}
+            style={this.props.scroll > 150 ? scrollChange : scrollDefault}
           >
             I am graduate University of Warmia and Mazury in Olsztyn, currently
             working as Navigation Information Analyst in aviation company. I am

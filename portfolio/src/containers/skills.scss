@@ -1,8 +1,13 @@
 @import "./presentational/_variables";
 
+.skillsSectionFix {
+  width: $head-width;
+  height: 1600px;
+}
+
 .skillsSection {
   width: 1200px;
-  height: 1200px;
+  height: 1485px;
   background-color: $col-primary;
   position: relative;
   color: $col-shining;
@@ -54,16 +59,6 @@
   top: 1020px;
 }
 
-.svgBootstrap,
-.svgMongo,
-.svgRedux,
-.svgJQuery,
-.svgWebpack,
-.svgGit {
-  width: 200px;
-  height: 164px;
-}
-
 .skillsAnim {
   animation: fadein 5s;
   width: 90%;
@@ -83,18 +78,18 @@
   align-items: center;
   margin: 10px 10px;
   color: $col-shining;
-  animation: moveFromLeft 1s 2s both;
+  animation: moveFromLeft 1.5s 3s both;
 }
 
 .skillDescriptionArea:nth-of-type(2),
 .skillDescriptionArea:nth-of-type(5),
 .skillDescriptionArea:nth-of-type(7) {
-  animation-delay: 3s;
+  animation-delay: 4s;
 }
 
 .skillDescriptionArea:nth-of-type(3),
 .skillDescriptionArea:nth-of-type(6) {
-  animation-delay: 4s;
+  animation-delay: 5s;
 }
 
 .skillTitle {

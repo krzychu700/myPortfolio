@@ -4,6 +4,7 @@ import Menu from "../src/containers/menu";
 import Header from "../src/containers/header";
 import About from "../src/containers/about";
 import Skills from "../src/containers/skills";
+import Portfolio from "../src/containers/portfolio";
 
 class App extends Component {
   constructor() {
@@ -52,10 +53,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Menu menuStyle={this.state.scrolPos} />
-        <Header headStyle={this.state.scrolPos} />
-        <About aboutStyle={this.state.scrolPos} />
-        <Skills aboutStyle={this.state.scrolPos} />
+        <Menu scroll={this.state.scrolPos} />
+        <Header scroll={this.state.scrolPos} />
+        <About scroll={this.state.scrolPos} />
+        <Skills scroll={this.state.scrolPos} />
+        <Portfolio scroll={this.state.scrolPos} />
       </div>
     );
   }
