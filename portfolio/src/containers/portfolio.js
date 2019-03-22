@@ -12,16 +12,21 @@ class Portfolio extends Component {
     };
 
     return (
-      <div className="aboutSectionFix" id="about">
-        <div className="aboutSection">
-          <p className="aboutTitle">PORTFOLIO</p>
-          <span className="aboutUndeline" />
+      <div className="portfolioSectionFix" id="portfolio">
+        <div className="portfolioSection">
+          <p className="portfolioTitle">PORTFOLIO</p>
+          <span className="portfolioUndeline" />
           <p
-            className="aboutAnim"
+            className="portfolioAnim"
             style={this.props.scroll > 150 ? scrollChange : scrollDefault}
-          >
-            I am
-          </p>
+          />
+          <div className="portfolioExampleArea">
+            <div className="portfolioExample" />
+            <div className="portfolioExample" />
+            <div className="portfolioExample" />
+            <div className="portfolioExample" />
+            <div className="portfolioExample" />
+          </div>
         </div>
       </div>
     );

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Switcher from "./hook/switcher";
 import "./menu.scss";
 
 class Menu extends Component {
@@ -18,6 +19,7 @@ class Menu extends Component {
         className="menu"
         ref="menu"
       >
+        <Switcher />
         <ul className="menuList">
           <li className="menuItem">
             <a className="menuLink" href="#home">
