@@ -60,7 +60,6 @@
 .portfolioExampleArea {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .portfolioExample {
@@ -68,6 +67,24 @@
   width: 300px;
   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
   background-color: red;
+}
+.as {height: 300px;
+  width: 300px;
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  
+  background-color: blue;
+}
+.examplesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.portfolioDetailsArea {
+  height: 300px;
+  width: 300px;
+  background-color: blue;
 }
 
 @keyframes fadein {

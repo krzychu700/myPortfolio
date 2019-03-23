@@ -19,7 +19,7 @@ class Menu extends Component {
         className="menu"
         ref="menu"
       >
-        <Switcher />
+        {/* <Switcher /> */}
         <ul className="menuList">
           <li className="menuItem">
             <a className="menuLink" href="#home">

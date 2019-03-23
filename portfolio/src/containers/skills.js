@@ -19,7 +19,7 @@ class Skills extends Component {
           <span className="skillsUndeline" />
           <div
             className="skillsAnim"
-            style={this.props.scroll > 560 ? scrollChange : scrollDefault}
+            style={this.props.scroll > 660 ? scrollChange : scrollDefault}
           >
             <div className="skillDescriptionArea">
               <span>

@@ -53,10 +53,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Menu scroll={this.state.scrolPos} />
+        {/* <Menu scroll={this.state.scrolPos} />
         <Header scroll={this.state.scrolPos} />
         <About scroll={this.state.scrolPos} />
-        <Skills scroll={this.state.scrolPos} />
+        <Skills scroll={this.state.scrolPos} /> */}
         <Portfolio scroll={this.state.scrolPos} />
       </div>
     );
