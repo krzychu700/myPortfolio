@@ -8,7 +8,8 @@ class Portfolio extends Component {
     super();
     this.state = {
       data: dataJson,
-      portfolio: []
+      portfolio: [],
+      active: false
     };
   }
 
@@ -18,26 +19,30 @@ class Portfolio extends Component {
 
   click = e => {
     const selected = e.target.id;
-
-    // const portfolio2 = [...this.state.portfolio];
-    // const selectedPortfolio = this.state.portfolio.filter(
-    //   port => port.id === selected
-    // );
-    // selectedPortfolio[0].chose = true;
-    // console.log(selectedPortfolio);
-    // console.log(dataJson);
-    // this.setState({
-    //   // portfolio: [...selectedPortfolio]
-    //   portfolio: [(selectedPortfolio[0].chose = true)]
-    // });
-    const players = this.state.portfolio.map(player => {
-      return { ...player, chose: player.id === selected };
+    const portItem = this.state.portfolio.map(portItem => {
+      return { ...portItem, chose: portItem.id === selected };
     });
-    this.setState({ portfolio: players });
+    const aa = portItem.filter(portItem => {
+      return portItem.id === selected;
+    });
+    this.setState({ portfolio: aa, active: true });
   };
 
   click2 = e => {
-    this.setState({ portfolio: [...dataJson] });
+    this.setState({ portfolio: [...dataJson], active: false });
+  };
+
+  click3 = e => {
+    const selected = e.target.id;
+    const portItem = this.state.data.map(portItem => {
+      return { ...portItem };
+    });
+    const aa = portItem.filter(portItem => {
+      console.log(portItem.API, selected, portItem.API === selected);
+      return portItem.API === selected;
+    });
+
+    this.setState({ portfolio: aa, active: false });
   };
 
   render() {
@@ -55,15 +60,56 @@ class Portfolio extends Component {
           <p className="portfolioTitle"> PORTFOLIO </p>
           <span className="portfolioUndeline" />
           <p
-            className="portfolioAnim"
+            className="portfolioAnim "
             style={this.props.scroll > 150 ? scrollChange : scrollDefault}
           />
-          <div className="portfolioExampleArea">
+          <div className="usedTechnologies">
+            <p
+              className="usedTechnologiesButton"
+              onClick={this.click3}
+              id="API"
+            >
+              API
+            </p>
+            <p
+              className="usedTechnologiesButton"
+              onClick={this.click3}
+              id="GIT"
+            >
+              GIT
+            </p>
+            <p className="usedTechnologiesButton" onClick={this.click2}>
+              ALL
+            </p>
+          </div>
+          <div
+            className={
+              this.state.active === false
+                ? "portfolioExampleArea"
+                : "portfolioExampleArea portfolioExampleArea--selected"
+            }
+          >
             <PortfolioItem
               portfolio={this.state.portfolio}
               click={this.click}
             />
-            <div className="portfolioDetailsArea" onClick={this.click2} />
+            <div>
+              {this.state.portfolio.length !== 0
+                ? this.state.portfolio.map(item => {
+                    return item.chose === true ? (
+                      <div
+                        className={
+                          item.chose === true ? "portfolioDetailsArea" : null
+                        }
+                        onClick={this.click2}
+                        key={item.id}
+                      >
+                        <p>{item.name}</p>
+                      </div>
+                    ) : null;
+                  })
+                : null}
+            </div>
           </div>
         </div>
       </div>

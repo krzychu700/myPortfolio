@@ -1,26 +1,30 @@
 [{
         "id": "1",
         "chose": false,
-        "name": "aa"
+        "name": "aa",
+        "img": "img/galaxy.jpg",
+        "API": "API"
     },
     {
         "id": "2",
         "chose": false,
-        "name": "aa"
+        "name": "bb",
+        "API": "GIT"
     },
     {
         "id": "3",
         "chose": false,
-        "name": "aa"
+        "name": "cc",
+        "API": "API"
     },
     {
         "id": "4",
         "chose": false,
-        "name": "aa"
+        "name": "dd"
     },
     {
         "id": "5",
         "chose": false,
-        "name": "aa"
+        "name": "ee"
     }
 ]
