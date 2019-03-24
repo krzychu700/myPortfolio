@@ -1,23 +1,43 @@
 import React, { Component } from "react";
+import PortfolioItem from "./presentational/portfolioItem";
 import "./portfolio.scss";
 import dataJson from "../Data.json";
 
 class Portfolio extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      dataJson,
       data: dataJson,
       portfolio: []
     };
   }
+
+  componentDidMount() {
+    this.setState({ portfolio: [...this.state.data] });
+  }
+
   click = e => {
     const selected = e.target.id;
-    const portfolio2 = [...this.state.data];
-    // console.log(portfolio2);
-    const selectedPortfolio = portfolio2.find(port => port.id === selected);
-    // selectedPortfolio.chose = true;
-    this.setState({ portfolio: { ...selectedPortfolio, tak: "tak" } });
+
+    // const portfolio2 = [...this.state.portfolio];
+    // const selectedPortfolio = this.state.portfolio.filter(
+    //   port => port.id === selected
+    // );
+    // selectedPortfolio[0].chose = true;
+    // console.log(selectedPortfolio);
+    // console.log(dataJson);
+    // this.setState({
+    //   // portfolio: [...selectedPortfolio]
+    //   portfolio: [(selectedPortfolio[0].chose = true)]
+    // });
+    const players = this.state.portfolio.map(player => {
+      return { ...player, chose: player.id === selected };
+    });
+    this.setState({ portfolio: players });
+  };
+
+  click2 = e => {
+    this.setState({ portfolio: [...dataJson] });
   };
 
   render() {
@@ -39,20 +59,11 @@ class Portfolio extends Component {
             style={this.props.scroll > 150 ? scrollChange : scrollDefault}
           />
           <div className="portfolioExampleArea">
-            <div className="examplesContainer">
-              <div
-                onClick={this.click}
-                className={
-                  this.state.portfolio.tak === "tak" ? "as" : "portfolioExample"
-                }
-                id="1"
-              />
-              <div onClick={this.click} className="portfolioExample" id="2" />
-              <div onClick={this.click} className="portfolioExample" id="3" />
-              <div onClick={this.click} className="portfolioExample" id="4" />
-              <div onClick={this.click} className="portfolioExample" id="5" />
-            </div>
-            <div className="portfolioDetailsArea" />
+            <PortfolioItem
+              portfolio={this.state.portfolio}
+              click={this.click}
+            />
+            <div className="portfolioDetailsArea" onClick={this.click2} />
           </div>
         </div>
       </div>

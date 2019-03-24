@@ -6,11 +6,13 @@ import About from "../src/containers/about";
 import Skills from "../src/containers/skills";
 import Portfolio from "../src/containers/portfolio";
 
+import dataJson from "./Data.json";
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      scrolPos: 0
+      scrolPos: 0,
+      data: dataJson
     };
   }
 
@@ -57,7 +59,7 @@ class App extends Component {
         <Header scroll={this.state.scrolPos} />
         <About scroll={this.state.scrolPos} />
         <Skills scroll={this.state.scrolPos} /> */}
-        <Portfolio scroll={this.state.scrolPos} />
+        <Portfolio dataJson={this.state.data} scroll={this.state.scrolPos} />
       </div>
     );
   }
