@@ -1,30 +1,155 @@
 [{
         "id": "1",
         "chose": false,
-        "name": "aa",
-        "img": "img/galaxy.jpg",
-        "API": "API"
+        "name": "Just do it",
+        "img": "img/justdoit.jpg",
+        "Layout": "Layout",
+        "JavaScript": "JavaScript",
+        "Github": "https://github.com/krzychu700/projekt-indywidualny",
+        "Live version": "https://krzychu700.github.io/projekt-indywidualny"
+
     },
     {
         "id": "2",
         "chose": false,
-        "name": "bb",
-        "API": "GIT"
+        "name": "Rock, paper, scissors",
+        "img": "img/paperRockScissors.jpg",
+        "JavaScript": "JavaScript",
+        "Github": "https://github.com/krzychu700/rock-paper-scissors",
+        "Live version": "https://krzychu700.github.io/rock-paper-scissors/"
     },
     {
         "id": "3",
         "chose": false,
-        "name": "cc",
-        "API": "API"
+        "name": "Random quote machine",
+        "img": "img/RandomQuoteMachine.jpg",
+        "JavaScript": "JavaScript",
+        "API": "API",
+        "Github": "https://github.com/krzychu700/16.5-losowanie-cytatow",
+        "Live version": "https://krzychu700.github.io/16.5-losowanie-cytatow/"
     },
     {
         "id": "4",
         "chose": false,
-        "name": "dd"
+        "name": "Kanban Board",
+        "img": "img/KanbanBoard.jpg",
+        "JavaScript": "JavaScript",
+        "API": "API",
+        "Github": "https://github.com/krzychu700/15.6-Trello",
+        "GithubAPI": "https://github.com/krzychu700/16.7-kanban",
+        "Live version": "https://krzychu700.github.io/15.6-Trello/"
+
     },
     {
         "id": "5",
         "chose": false,
-        "name": "ee"
+        "name": "Country info search",
+        "img": "img/countrySearch.jpg",
+        "JavaScript": "JavaScript",
+        "API": "API",
+        "Github": "https://github.com/krzychu700/16.6-Wyszukiwarka-kraj-w",
+        "Live version": "https://krzychu700.github.io/16.6-Wyszukiwarka-kraj-w/"
+    },
+    {
+        "id": "6",
+        "chose": false,
+        "name": "Group project",
+        "img": "img/groupProject.jpg",
+        "JavaScript": "JavaScript",
+        "Layout": "Layout",
+        "Github": "https://github.com/kodilla-wdp-group-project/wdp-1809-02",
+        "Live version": "https://dreamy-goldwater.netlify.com/"
+    },
+    {
+        "id": "7",
+        "chose": false,
+        "name": "GIF search",
+        "img": "img/gifSearch.jpg",
+        "JavaScript": "JavaScript",
+        "React": "React",
+        "API": "API",
+        "Github": "https://github.com/krzychu700/18.8-react-wyszukiwarka-gifow",
+        "Live version": "https://krzychu700.github.io/18.8-react-wyszukiwarka-gifow/"
+    },
+    {
+        "id": "8",
+        "chose": false,
+        "name": "GITHUB users search",
+        "img": "img/githubSearch.jpg",
+        "JavaScript": "JavaScript",
+        "React": "React",
+        "API": "API",
+        "Github": "https://github.com/krzychu700/19-9-wyszukiwarka-uzytkownikow",
+        "Live version": "https://krzychu700.github.io/19-9-wyszukiwarka-uzytkownikow/"
+    },
+    {
+        "id": "9",
+        "chose": false,
+        "name": "Chat app",
+        "img": "img/chat.jpg",
+        "JavaScript": "JavaScript",
+        "Github": "https://github.com/krzychu700/26-czat"
+    },
+    {
+        "id": "10",
+        "chose": false,
+        "name": "Shop app",
+        "img": "img/shop.jpg",
+        "Layout": "Layout",
+        "React": "React",
+        "JavaScript": "JavaScript",
+        "Github": "https://github.com/krzychu700/React-Shop",
+        "Live version": "https://krzychu700.github.io/React-Shop/#/1/name/desc"
+    },
+    {
+        "id": "11",
+        "chose": false,
+        "name": "Portfolio communication",
+        "img": "img/portfolioCommunication.jpg",
+        "Layout": "Layout",
+        "API": "API",
+        "JavaScript": "JavaScript",
+        "Github": "https://github.com/krzychu700/16.8-Portfolio2",
+        "Live version": "https://krzychu700.github.io/16.8-Portfolio2/"
+    },
+    {
+        "id": "12",
+        "chose": false,
+        "name": "Sudoku game",
+        "img": "img/sudoku.jpg",
+        "API": "API",
+        "JavaScript": "JavaScript",
+        "React": "React",
+        "Github": "https://github.com/krzychu700/SudokuGame",
+        "Live version": "https://krzychu700.github.io/SudokuGame/"
+    },
+    {
+        "id": "13",
+        "chose": false,
+        "name": "Portfolio first project",
+        "img": "img/portfolio1.jpg",
+        "JavaScript": "JavaScript",
+        "Github": "https://github.com/krzychu700/7.7.Portfolio1",
+        "Live version": "https://krzychu700.github.io/7.7.Portfolio1/"
+    },
+    {
+        "id": "14",
+        "chose": false,
+        "name": "Country database",
+        "img": "img/countryDatabase.jpg",
+        "JavaScript": "JavaScript",
+        "React": "React",
+        "Github": "https://github.com/krzychu700/28.3-React-Redux-Router-Baza-panstw/tree/task3",
+        "Live version": "https://krzychu700.github.io/28.3-React-Redux-Router-Baza-panstw/#/"
+    },
+    {
+        "id": "15",
+        "chose": false,
+        "name": "Portfolio page",
+        "img": "img/stars3.jpg",
+        "JavaScript": "JavaScript",
+        "React": "React",
+        "Github": "https://github.com/krzychu700/myPortfolio",
+        "Live version": "https://krzychu700.github.io/28.3-React-Redux-Router-Baza-panstw/#/"
     }
 ]

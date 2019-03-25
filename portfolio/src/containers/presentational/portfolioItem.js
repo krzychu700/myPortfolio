@@ -10,7 +10,7 @@ const PortfolioItem = props => (
           className={
             item.chose === true
               ? "portfolioExample portfolioExample--selected"
-              : "portfolioExample"
+              : "portfolioExample "
           }
           style={{
             backgroundImage: `url("${item.img}")`

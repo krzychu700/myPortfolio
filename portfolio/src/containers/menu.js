@@ -36,7 +36,11 @@ class Menu extends Component {
               Skills
             </a>
           </li>
-          <li className="menuItem">Portfolio</li>
+          <li className="menuItem">
+            <a className="menuLink" href="#projects">
+              Portfolio
+            </a>
+          </li>
           <li className="menuItem">D</li>
           <li className="menuItem">E</li>
         </ul>
