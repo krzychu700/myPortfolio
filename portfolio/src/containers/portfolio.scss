@@ -84,21 +84,7 @@
   z-index: 2;
 
   &--selected {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    width: 450px;
-    height: 600px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: fadein 3s linear;
-    opacity: 1;
-
-    &:hover {
-      transform: scale(1.3);
-      transition: transform 0.2s;
-      z-index: 10;
-      cursor: none;
-    }
+    display: none;
   }
 
   &:hover {
@@ -109,6 +95,14 @@
   }
 }
 
+.imgPortfolioDetails {
+  width: 450px;
+  max-height: 700px;
+  position: absolute;
+  left: -480px;
+  object-fit: contain;
+}
+
 .usedTechnologies {
   display: flex;
   justify-content: space-around;
@@ -117,6 +111,10 @@
   height: 80px;
   margin: 10px 0 30px;
   position: relative;
+}
+
+.projectHideInfo {
+  display: none;
 }
 
 .usedTechnologiesButton {
@@ -144,9 +142,16 @@
 
 .textToGithub {
   position: absolute;
-  top: 80px;
-  right: 10px;
+  top: 70px;
+  right: 30px;
   font-style: italic;
+  display: flex;
+  align-items: center;
+
+  i {
+    margin: 5px 10px;
+    font-size: 30px;
+  }
 }
 
 .examplesContainer {
@@ -159,6 +164,27 @@
   padding: 20px;
 }
 
+.projectName {
+  margin: 15px 0;
+  font-size: 30px;
+}
+
+.projectDescription,
+.projectTechnologies {
+  margin: 10px 0;
+}
+
+.projectLive {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.projectGithub {
+  margin: 0 10px;
+  font-size: 30px;
+}
+
 .portfolioImg {
   width: 120%;
   height: 100%;
@@ -166,9 +192,14 @@
 }
 
 .portfolioDetailsArea {
-  height: 300px;
+  height: 410px;
   width: 700px;
-  background-color: blue;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: $box-color;
+  position: relative;
   animation: fadein 3s linear;
 }
 

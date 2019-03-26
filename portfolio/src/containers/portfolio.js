@@ -132,6 +132,13 @@ class Portfolio extends Component {
             </p>
             <p className="textToGithub">
               For more projects, please visit my Github
+              <a
+                style={{ display: "table-cell" }}
+                href="https://github.com/krzychu700"
+                target="_blank"
+              >
+                <i className="fab fa-github" />
+              </a>
             </p>
           </div>
           <div
