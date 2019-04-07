@@ -2,12 +2,12 @@
 
 .aboutSectionFix {
   width: $head-width;
-  height: 420px;
+  height: 770px;
 }
 
 .aboutSection {
   width: 1200px;
-  height: 300px;
+  height: 650px;
   background-color: $col-primary;
   position: relative;
   color: $col-shining;
@@ -25,7 +25,7 @@
   border-style: solid;
   border-width: 0 0 60px 1200px;
   border-color: transparent transparent $col-primary transparent;
-  top: -20%;
+  top: -60px;
   z-index: 6;
 }
 
@@ -37,7 +37,7 @@
   border-style: solid;
   border-width: 0 1200px 60px 0;
   border-color: transparent $col-primary transparent transparent;
-  bottom: -20%;
+  bottom: -60px;
   z-index: 6;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .aboutUndeline {
-  @include undelineTitle
+  @include undelineTitle;
 }
 
 .aboutAnim {
@@ -55,6 +55,60 @@
   width: 80%;
   margin-top: 20px;
   text-align: justify;
+}
+
+.hobbiesSection {
+  animation: fadein 5s linear;
+  width: 80%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hobbies {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 10px;
+}
+
+.hobbie {
+  width: 380px;
+  height: 310px;
+  background-color: $box-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.numberSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numberCounter {
+  font-size: 44px;
+  width: 190px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.descriptionSectionHobbie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hobbieText {
+  width: 190px;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.hobbieLogo {
+  height: 150px;
 }
 
 @keyframes fadein {

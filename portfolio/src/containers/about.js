@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Hobbies from "./hobbies";
 import "./about.scss";
 
 class About extends Component {
@@ -29,6 +30,16 @@ class About extends Component {
             realized by Kodilla. Currently I am working on my own projects,
             trying to improve my skills and practice knowledge, which I learned.
           </p>
+          <div
+            className="hobbiesSection"
+            style={this.props.scroll > 390 ? scrollChange : scrollDefault}
+          >
+            <p>
+              I also love good fantasy movies, games and books, below some facts
+              about that:
+            </p>
+            {this.props.scroll > 380 ? <Hobbies /> : null}
+          </div>
         </div>
       </div>
     );

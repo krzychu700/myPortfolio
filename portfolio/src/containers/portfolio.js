@@ -121,7 +121,7 @@ class Portfolio extends Component {
               onClick={this.handleClickSearchAPI}
               id="API"
             >
-              Projects, where API was used
+              Projects, based on API
             </p>
             <p
               className="usedTechnologiesButton"

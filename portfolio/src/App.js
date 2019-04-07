@@ -5,6 +5,7 @@ import Header from "../src/containers/header";
 import About from "../src/containers/about";
 import Skills from "../src/containers/skills";
 import Portfolio from "../src/containers/portfolio";
+import Contact from "../src/containers/contact";
 
 import dataJson from "./Data.json";
 class App extends Component {
@@ -60,6 +61,7 @@ class App extends Component {
         <About scroll={this.state.scrolPos} />
         <Skills scroll={this.state.scrolPos} />
         <Portfolio dataJson={this.state.data} scroll={this.state.scrolPos} />
+        <Contact />
       </div>
     );
   }

@@ -155,7 +155,7 @@ class Header extends Component {
             </div>
           </div>
           <div className="canvasSection">
-            <Canvas />
+            {this.props.scroll < 880 ? <Canvas /> : null}
           </div>
           <div className="bcgPicture">
             <img
