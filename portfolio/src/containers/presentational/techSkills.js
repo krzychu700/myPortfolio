@@ -53,7 +53,7 @@ class TechSkills extends Component {
             <div className="techSkill">
               <img
                 className="svgBootstrap"
-                src="/img/Bootstrap.svg"
+                src={process.env.PUBLIC_URL + "/img/Bootstrap.svg"}
                 alt="bootstrap icon"
               />
               <p className="techSkillName">Bootstrap</p>
@@ -62,21 +62,25 @@ class TechSkills extends Component {
             <div className="techSkill">
               <img
                 className="svgMongo"
-                src="/img/Mongodb.svg"
+                src={process.env.PUBLIC_URL + "/img/Mongodb.svg"}
                 alt="Mongodb icon"
               />
               <p className="techSkillName">MongoDB</p>
             </div>
 
             <div className="techSkill">
-              <img className="svgRedux" src="/img/Redux.svg" alt="Redux icon" />
+              <img
+                className="svgRedux"
+                src={process.env.PUBLIC_URL + "/img/Redux.svg"}
+                alt="Redux icon"
+              />
               <p className="techSkillName">Redux</p>
             </div>
 
             <div className="techSkill">
               <img
                 className="svgJQuery"
-                src="/img/Jquery.svg"
+                src={process.env.PUBLIC_URL + "/img/Jquery.svg"}
                 alt="Jquery icon"
               />
               <p className="techSkillName">jQuery</p>
@@ -85,14 +89,18 @@ class TechSkills extends Component {
             <div className="techSkill">
               <img
                 className="svgWebpack"
-                src="/img/Webpack.svg"
+                src={process.env.PUBLIC_URL + "/img/Webpack.svg"}
                 alt="Webpack icon"
               />
               <p className="techSkillName">Webpack</p>
             </div>
 
             <div className="techSkill">
-              <img className="svgGit" src="/img/Git.svg" alt="Git icon" />
+              <img
+                className="svgGit"
+                src={process.env.PUBLIC_URL + "/img/Git.svg"}
+                alt="Git icon"
+              />
               <p className="techSkillName">Git</p>
             </div>
           </Coverflow>

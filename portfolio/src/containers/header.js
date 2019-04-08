@@ -8,7 +8,12 @@ class Header extends Component {
     this.state = {
       cursor1: "true",
       cursor2: "false",
-      cursor3: "false"
+      cursor3: "false",
+      change: false,
+      writ: "",
+      txt: this.props.text.txt,
+      txt2: props.text.txt2,
+      txt3: props.text.txt3
     };
   }
 
@@ -16,23 +21,35 @@ class Header extends Component {
     this.writingAnim();
   }
 
-  writingAnim = () => {
+  componentWillReceiveProps() {
+    console.log(this.props.text.txt);
+    this.setState({
+      cursor1: "true",
+      cursor2: "false",
+      cursor3: "false",
+      change: !this.state.change
+    });
+    this.writingAnim();
+  }
+  writingAnim = props => {
     const writinArea = this.refs.writing;
     const writinArea2 = this.refs.writing2;
     const spnCursor = this.refs.cursor;
     const spnCursor2 = this.refs.cursor2;
     const writinArea3 = this.refs.writing3;
     const spnCursor3 = this.refs.cursor3;
-    const txt = "Hello,";
-    const txt2 = "I'm Krzysztof Szypulski";
-    const txt3 = "< Junior Front-end developer />";
     let indexText = 0;
     let indexText2 = 0;
     let indexText3 = 0;
     const time = 10;
 
     const addLetter1 = () => {
-      writinArea.textContent += txt[indexText];
+      const txt = this.state.txt;
+      // writinArea.textContent += txt[indexText];
+      this.setState({
+        writ: (this.state.writ += txt[indexText])
+      });
+      console.log(this.state.writ, txt[indexText]);
       indexText++;
       if (indexText === txt.length) {
         clearInterval(indexTyping);
@@ -46,6 +63,7 @@ class Header extends Component {
 
     const changePara2 = () => {
       const addLetter2 = () => {
+        const txt2 = this.state.txt2;
         writinArea2.textContent += txt2[indexText2];
         indexText2++;
         if (indexText2 === txt2.length) {
@@ -65,6 +83,7 @@ class Header extends Component {
 
     const changePara3 = () => {
       const addLetter3 = () => {
+        const txt3 = this.state.txt3;
         writinArea3.textContent += txt3[indexText3];
         indexText3++;
         if (indexText3 === txt3.length) {
@@ -121,7 +140,10 @@ class Header extends Component {
           </div>
           <div className="headerTextArea">
             <div className="headerTextAreaPara">
-              <p className="nameText1" ref="writing" />
+              <p className="nameText1" ref="writing">
+                {" "}
+                {this.state.writ}
+              </p>
               <span
                 className={
                   this.state.cursor1 === "true" ? "cursor cursor1" : "hide"
@@ -159,7 +181,7 @@ class Header extends Component {
           </div>
           <div className="bcgPicture">
             <img
-              src="/img/mountain2.png"
+              src={process.env.PUBLIC_URL + "/img/mountain2.png"}
               alt="mountains"
               className="headerImg"
             />

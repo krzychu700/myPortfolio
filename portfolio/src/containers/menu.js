@@ -3,7 +3,11 @@ import Switcher from "./hook/switcher";
 import "./menu.scss";
 
 class Menu extends Component {
-  render() {
+  constructor() {
+    super();
+  }
+
+  render(props) {
     const scrollChange = {
       backgroundColor: "#0E0F11",
       borderBottom: "2px solid #fff",
@@ -23,7 +27,7 @@ class Menu extends Component {
         <ul className="menuList">
           <li className="menuItem">
             <a className="menuLink" href="#home">
-              Home
+              {this.props.text.home}
             </a>
           </li>
           <li className="menuItem">
@@ -41,8 +45,14 @@ class Menu extends Component {
               Portfolio
             </a>
           </li>
-          <li className="menuItem">D</li>
-          <li className="menuItem">E</li>
+          <li className="menuItem">
+            <a className="menuLink" href="#contact">
+              Contact
+            </a>
+          </li>
+          <li className="menuItem" onClick={this.props.langSwitcher}>
+            {this.props.language === "en" ? "PL" : "EN"}
+          </li>
         </ul>
       </div>
     );

@@ -13,7 +13,7 @@ const PortfolioItem = props => (
               : "portfolioExample "
           }
           style={{
-            backgroundImage: `url("${item.img}")`
+            backgroundImage: `url("${process.env.PUBLIC_URL + item.img}")`
           }}
           id={item.id}
         />

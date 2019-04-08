@@ -9,7 +9,7 @@ class Hobbies extends Component {
         <div className="hobbie">
           <img
             className="hobbieLogo"
-            src="img/WitcherLogo.png"
+            src={process.env.PUBLIC_URL + "/img/WitcherLogo.png"}
             alt="wither logo"
           />
           <div className="numberSection">
@@ -26,7 +26,11 @@ class Hobbies extends Component {
           </div>
         </div>
         <div className="hobbie">
-          <img className="hobbieLogo" src="img/marvel.png" alt="marvel logo" />
+          <img
+            className="hobbieLogo"
+            src={process.env.PUBLIC_URL + "/img/marvel.png"}
+            alt="marvel logo"
+          />
           <div className="numberSection">
             <div className="numberCounter">
               <CountUp start={0} end={21} delay={3} duration={5} />
@@ -41,7 +45,11 @@ class Hobbies extends Component {
           </div>
         </div>
         <div className="hobbie">
-          <img className="hobbieLogo" src="img/sword.png" alt="marvel logo" />
+          <img
+            className="hobbieLogo"
+            src={process.env.PUBLIC_URL + "/img/sword.png"}
+            alt="marvel logo"
+          />
           <div className="numberSection">
             <div className="numberCounter">
               <CountUp start={0} end={17} delay={3} duration={5} />

@@ -48,13 +48,13 @@ const PortfolioDetails = props => (
               <p className="projectTechnologies">{item.Technologies}</p>
               <ImageZoom
                 image={{
-                  src: `${item.img}`,
-                  alt: `${item.img}`,
+                  src: `${process.env.PUBLIC_URL + item.img}`,
+                  alt: `${process.env.PUBLIC_URL + item.img}`,
                   className: "imgPortfolioDetails"
                 }}
                 zoomImage={{
-                  src: `${item.img}`,
-                  alt: `${item.img}`
+                  src: `${process.env.PUBLIC_URL + item.img}`,
+                  alt: `${process.env.PUBLIC_URL + item.img}`
                 }}
               />
             </div>

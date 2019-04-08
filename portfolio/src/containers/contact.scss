@@ -1,0 +1,98 @@
+@import "./presentational/_variables";
+
+.contactSectionFix {
+  width: $head-width;
+  height: 770px;
+}
+
+.contactSection {
+  width: 1200px;
+  height: 650px;
+  background-color: $col-primary;
+  position: relative;
+  color: $col-shining;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contactSection::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 60px 0 0 1200px;
+  border-color: transparent transparent transparent $col-primary;
+  top: -60px;
+  z-index: 6;
+}
+
+.contactSection::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 60px 1200px 0 0;
+  border-color: $col-primary transparent transparent transparent;
+  bottom: -60px;
+  z-index: 6;
+}
+
+.contactTitle {
+  font-size: 60px;
+  margin: 30px 0;
+}
+
+.contactUndeline {
+  @include undelineTitle;
+}
+
+.formSection {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  margin-top: 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.formText {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.formInput {
+  width: 100%;
+}
+
+.formTextArea {
+  width: 100%;
+  height: 150px;
+}
+
+.buttonSubmit {
+  margin-top: 30px;
+  height: 50px;
+  width: 300px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  border: 2px solid #fff;
+  background-color: black;
+  color: #fff;
+
+
+  &:hover {
+    color: white;
+    box-shadow: 0 0 30px 0 transparentize($col-primary, 0.5);
+    background-color: $col-primary;
+    transition: all 0.2s ease-out;
+    filter: drop-shadow(0 0 8px #fff);
+
+    &:before {
+      animation: shine 0.5s 0s linear;
+    }
+  }
+}

@@ -6,6 +6,9 @@ import About from "../src/containers/about";
 import Skills from "../src/containers/skills";
 import Portfolio from "../src/containers/portfolio";
 import Contact from "../src/containers/contact";
+import Footer from "../src/containers/footer";
+import En from "./en.json";
+import Pl from "./pl.json";
 
 import dataJson from "./Data.json";
 class App extends Component {
@@ -13,7 +16,9 @@ class App extends Component {
     super();
     this.state = {
       scrolPos: 0,
-      data: dataJson
+      data: dataJson,
+      language: "en",
+      text: En
     };
   }
 
@@ -24,7 +29,7 @@ class App extends Component {
 
   handleScroll() {
     const scrolPos = window.pageYOffset;
-    console.log(scrolPos);
+    // console.log(scrolPos);
     if (scrolPos > 100) {
       this.setState({
         scrolPos
@@ -35,6 +40,21 @@ class App extends Component {
       });
     }
   }
+
+  handleLanguage = () => {
+    if (this.state.language === "en") {
+      this.setState({
+        language: "pl",
+        text: Pl
+      });
+    }
+    if (this.state.language === "pl") {
+      this.setState({
+        language: "en",
+        text: En
+      });
+    }
+  };
 
   menuNavigationScroll() {
     (function navSmoothScrolling() {
@@ -56,12 +76,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Menu scroll={this.state.scrolPos} />
-        <Header scroll={this.state.scrolPos} />
+        <Menu
+          scroll={this.state.scrolPos}
+          langSwitcher={this.handleLanguage}
+          text={this.state.text}
+          language={this.state.language}
+        />
+        <Header
+          scroll={this.state.scrolPos}
+          text={this.state.text}
+          language={this.state.language}
+        />
         <About scroll={this.state.scrolPos} />
         <Skills scroll={this.state.scrolPos} />
         <Portfolio dataJson={this.state.data} scroll={this.state.scrolPos} />
         <Contact />
+        <Footer />
       </div>
     );
   }
