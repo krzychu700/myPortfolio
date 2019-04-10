@@ -21,8 +21,8 @@ class Hobbies extends Component {
             </div>
           </div>
           <div className="descriptionSectionHobbie">
-            <p className="hobbieText">hours spend in 3 Witcher games</p>
-            <p className="hobbieText">books read from the Witcher Saga</p>
+            <p className="hobbieText">{this.props.text.hobby1} </p>
+            <p className="hobbieText"> {this.props.text.hobby2} </p>
           </div>
         </div>
         <div className="hobbie">
@@ -40,8 +40,8 @@ class Hobbies extends Component {
             </div>
           </div>
           <div className="descriptionSectionHobbie">
-            <p className="hobbieText">movies watched from Marvel Universe</p>
-            <p className="hobbieText">series watched based on Marvel Comics</p>
+            <p className="hobbieText"> {this.props.text.hobby3} </p>
+            <p className="hobbieText"> {this.props.text.hobby4} </p>
           </div>
         </div>
         <div className="hobbie">
@@ -59,10 +59,8 @@ class Hobbies extends Component {
             </div>
           </div>
           <div className="descriptionSectionHobbie">
-            <p className="hobbieText">
-              books read from the Sword of the Truth saga
-            </p>
-            <p className="hobbieText">which gives this number of pages read</p>
+            <p className="hobbieText">{this.props.text.hobby5}</p>
+            <p className="hobbieText">{this.props.text.hobby6} </p>
           </div>
         </div>
       </div>

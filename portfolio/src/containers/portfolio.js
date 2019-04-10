@@ -2,80 +2,13 @@ import React, { Component } from "react";
 import PortfolioItem from "./presentational/portfolioItem";
 import PortfolioDetails from "./presentational/portfolioDetails";
 import "./portfolio.scss";
-import dataJson from "../Data.json";
-
 class Portfolio extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      data: dataJson,
-      portfolio: [],
       active: false
     };
   }
-
-  componentDidMount() {
-    this.setState({ portfolio: [...this.state.data] });
-  }
-
-  handleClickShowDetails = e => {
-    const selected = e.target.id;
-    const portItem = this.state.portfolio.map(portItem => {
-      return { ...portItem, chose: portItem.id === selected };
-    });
-    const filterItem = portItem.filter(portItem => {
-      return portItem.id === selected;
-    });
-    this.setState({ portfolio: filterItem, active: true });
-  };
-
-  handleClickShowAll = e => {
-    this.setState({ portfolio: [...dataJson], active: false });
-  };
-
-  handleClickSearchLayout = e => {
-    const selected = e.target.id;
-    const portItem = this.state.data.map(portItem => {
-      return { ...portItem };
-    });
-    const filterItem = portItem.filter(portItem => {
-      return portItem.Layout === selected;
-    });
-    this.setState({ portfolio: filterItem, active: false });
-  };
-
-  handleClickSearchJavaScript = e => {
-    const selected = e.target.id;
-    const portItem = this.state.data.map(portItem => {
-      return { ...portItem };
-    });
-    const filterItem = portItem.filter(portItem => {
-      return portItem.JavaScript === selected;
-    });
-    this.setState({ portfolio: filterItem, active: false });
-  };
-
-  handleClickSearchAPI = e => {
-    const selected = e.target.id;
-    const portItem = this.state.data.map(portItem => {
-      return { ...portItem };
-    });
-    const filterItem = portItem.filter(portItem => {
-      return portItem.API === selected;
-    });
-    this.setState({ portfolio: filterItem, active: false });
-  };
-
-  handleClickSearchReact = e => {
-    const selected = e.target.id;
-    const portItem = this.state.data.map(portItem => {
-      return { ...portItem };
-    });
-    const filterItem = portItem.filter(portItem => {
-      return portItem.React === selected;
-    });
-    this.setState({ portfolio: filterItem, active: false });
-  };
 
   render() {
     const scrollChange = {
@@ -89,7 +22,7 @@ class Portfolio extends Component {
     return (
       <div className="portfolioSectionFix">
         <div className="portfolioSection" id="projects">
-          <p className="portfolioTitle"> PORTFOLIO </p>
+          <p className="portfolioTitle"> {this.props.text.PORTFOLIO} </p>
           <span className="portfolioUndeline" />
           <p
             className="portfolioAnim "
@@ -98,40 +31,40 @@ class Portfolio extends Component {
           <div className="usedTechnologies">
             <p
               className="usedTechnologiesButton"
-              onClick={this.handleClickShowAll}
+              onClick={this.props.handleClickShowAll}
             >
-              All projects
+              {this.props.text.button1}
             </p>
             <p
               className="usedTechnologiesButton"
-              onClick={this.handleClickSearchLayout}
+              onClick={this.props.handleClickSearch}
               id="Layout"
             >
-              Projects based on designed layouts
+              {this.props.text.button2}
             </p>
             <p
               className="usedTechnologiesButton"
-              onClick={this.handleClickSearchJavaScript}
+              onClick={this.props.handleClickSearch}
               id="JavaScript"
             >
-              Projects, where JavaScript was used
+              {this.props.text.button3}
             </p>
             <p
               className="usedTechnologiesButton"
-              onClick={this.handleClickSearchAPI}
+              onClick={this.props.handleClickSearch}
               id="API"
             >
-              Projects, based on API
+              {this.props.text.button4}
             </p>
             <p
               className="usedTechnologiesButton"
-              onClick={this.handleClickSearchReact}
+              onClick={this.props.handleClickSearch}
               id="React"
             >
-              Projects written in React
+              {this.props.text.button5}
             </p>
             <p className="textToGithub">
-              For more projects, please visit my Github
+              {this.props.text.GitLink}
               <a
                 style={{ display: "table-cell" }}
                 href="https://github.com/krzychu700"
@@ -149,12 +82,13 @@ class Portfolio extends Component {
             }
           >
             <PortfolioItem
-              portfolio={this.state.portfolio}
-              click={this.handleClickShowDetails}
+              portfolio={this.props.portfolio}
+              click={this.props.handleClickShowDetails}
             />
             <PortfolioDetails
-              portfolio={this.state.portfolio}
-              click={this.handleClickShowAll}
+              portfolio={this.props.portfolio}
+              click={this.props.handleClickShowAll}
+              text={this.props.text}
             />
           </div>
         </div>

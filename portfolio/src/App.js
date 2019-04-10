@@ -10,15 +10,15 @@ import Footer from "../src/containers/footer";
 import En from "./en.json";
 import Pl from "./pl.json";
 
-import dataJson from "./Data.json";
 class App extends Component {
   constructor() {
     super();
     this.state = {
       scrolPos: 0,
-      data: dataJson,
       language: "en",
-      text: En
+      text: En,
+      portfolio: [...En.en],
+      data: En.en
     };
   }
 
@@ -45,13 +45,17 @@ class App extends Component {
     if (this.state.language === "en") {
       this.setState({
         language: "pl",
-        text: Pl
+        text: Pl,
+        portfolio: [...Pl.pl],
+        data: Pl.pl
       });
     }
     if (this.state.language === "pl") {
       this.setState({
         language: "en",
-        text: En
+        text: En,
+        portfolio: [...En.en],
+        data: En.en
       });
     }
   };
@@ -73,6 +77,32 @@ class App extends Component {
     })();
   }
 
+  handleClickShowDetails = e => {
+    const selected = e.target.id;
+    const portItem = this.state.portfolio.map(portItem => {
+      return { ...portItem, chose: portItem.id === selected };
+    });
+    const filterItem = portItem.filter(portItem => {
+      return portItem.id === selected;
+    });
+    this.setState({ portfolio: filterItem, active: true });
+  };
+
+  handleClickShowAll = e => {
+    this.setState({ portfolio: [...this.state.data], active: false });
+  };
+
+  handleClickSearch = e => {
+    const selected = e.target.id;
+    const portItem = this.state.data.map(portItem => {
+      return { ...portItem };
+    });
+    const filterItem = portItem.filter(portItem => {
+      return portItem[selected] === selected;
+    });
+    this.setState({ portfolio: filterItem, active: false });
+  };
+
   render() {
     return (
       <div className="App">
@@ -87,10 +117,18 @@ class App extends Component {
           text={this.state.text}
           language={this.state.language}
         />
-        <About scroll={this.state.scrolPos} />
-        <Skills scroll={this.state.scrolPos} />
-        <Portfolio dataJson={this.state.data} scroll={this.state.scrolPos} />
-        <Contact />
+        <About scroll={this.state.scrolPos} text={this.state.text} />
+        <Skills scroll={this.state.scrolPos} text={this.state.text} />
+        <Portfolio
+          scroll={this.state.scrolPos}
+          text={this.state.text}
+          language={this.state.language}
+          portfolio={this.state.portfolio}
+          handleClickShowDetails={this.handleClickShowDetails}
+          handleClickShowAll={this.handleClickShowAll}
+          handleClickSearch={this.handleClickSearch}
+        />
+        <Contact text={this.state.text} />
         <Footer />
       </div>
     );

@@ -15,7 +15,7 @@ class Skills extends Component {
     return (
       <div className="skillsSectionFix">
         <div className="skillsSection" id="skills">
-          <p className="skillsTitle">SKILLS</p>
+          <p className="skillsTitle">{this.props.text.SKILLS} </p>
           <span className="skillsUndeline" />
           <div
             className="skillsAnim"
@@ -25,83 +25,55 @@ class Skills extends Component {
               <span>
                 <i className="fab fa-leanpub skillIcon" />
               </span>
-              <p className="skillTitle">Desire to learn</p>
-              <p className="skillDescription">
-                I always had a thirst for getting to know of computer software,
-                how it works and I have a hunger to always keep on improving and
-                learning new things
-              </p>
+              <p className="skillTitle">{this.props.text.skill1} </p>
+              <p className="skillDescription">{this.props.text.skillText1}</p>
             </div>
             <div className="skillDescriptionArea">
               <span>
                 <i className="far fa-comments skillIcon" />
               </span>
-              <p className="skillTitle">Communication</p>
-              <p className="skillDescription">
-                Good communication is the key to success, not matter, whether in
-                a team or with clients. Throughout my career I have worked with
-                various people from various teams.
-              </p>
+              <p className="skillTitle"> {this.props.text.skill2} </p>
+              <p className="skillDescription">{this.props.text.skillText2}</p>
             </div>
             <div className="skillDescriptionArea">
               <span>
                 <i className="fas fa-dumbbell skillIcon" />
               </span>
-              <p className="skillTitle">Motivated</p>
-              <p className="skillDescription">
-                I am an ambitious, hardworking individual and I don't give up
-                until I finish my task.
-              </p>
+              <p className="skillTitle">{this.props.text.skill3} </p>
+              <p className="skillDescription">{this.props.text.skillText3}</p>
             </div>
             <div className="skillDescriptionArea">
               <span>
                 <i className="fas fa-lightbulb skillIcon" />
               </span>
-              <p className="skillTitle">Problem solving</p>
-              <p className="skillDescription">
-                Throughout my work many times I had to face with different
-                problems. Even now, when coding became my passion, this is a
-                normal situation. Thanks to that, I'm learning more and solving
-                problems makes more fun.
-              </p>
+              <p className="skillTitle">{this.props.text.skill4} </p>
+              <p className="skillDescription">{this.props.text.skillText4}</p>
             </div>
             <div className="skillDescriptionArea">
               <span>
                 <i className="fas fa-sitemap skillIcon" />
               </span>
-              <p className="skillTitle">Well organized </p>
-              <p className="skillDescription">
-                My role requires strong organisational skills. I had to be able
-                to work on many tasks at once, focus on most important items and
-                coordinate other tasks.
-              </p>
+              <p className="skillTitle"> {this.props.text.skill5} </p>
+              <p className="skillDescription">{this.props.text.skillText5}</p>
             </div>
             <div className="skillDescriptionArea">
               <span>
                 <i className="fas fa-search skillIcon" />
               </span>
-              <p className="skillTitle">Attention to details</p>
-              <p className="skillDescription">
-                I am a perfectionist and I pay much attention to details. It is
-                important for me to provide a 100% completed and good looking
-                product.
-              </p>
+              <p className="skillTitle"> {this.props.text.skill6} </p>
+              <p className="skillDescription">{this.props.text.skillText6}</p>
             </div>
             <div className="skillDescriptionArea">
               <span>
                 <i className="fas fa-award skillIcon" />
               </span>
-              <p className="skillTitle">Professionalism</p>
-              <p className="skillDescription">
-                Working with various clients has taught me to deliver products
-                on time and in line with their expectations. In this way, I
-                gained trust and clients knew that they could count on me.
-              </p>
+              <p className="skillTitle">{this.props.text.skill7} </p>
+              <p className="skillDescription">{this.props.text.skillText7}</p>
             </div>
           </div>
-          <p className="skillsTitle">TECHNICAL SKILLS</p>
+          <p className="skillsTitle"> {this.props.text.TechSkill} </p>
           <span className="skillsUndeline skillsUndeline--techSkills" />
-          <TechSkills />
+          <TechSkills text={this.props.text} />
         </div>
       </div>
     );

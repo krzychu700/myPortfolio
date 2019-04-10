@@ -6,35 +6,35 @@ class Contact extends Component {
     return (
       <div className="contactSectionFix" id="contact">
         <div className="contactSection">
-          <p className="contactTitle">CONTACT WITH ME</p>
+          <p className="contactTitle">{this.props.text.contactTxt1} </p>
           <span className="contactUndeline" />
           <form
             className="formSection"
             method="POST"
             action="https://formspree.io/krzychu700@gmail.com"
           >
-            <p className="formText">Your name:</p>
+            <p className="formText">{this.props.text.contactTxt2} </p>
             <input
               className="formInput"
               type="text"
               name="name"
-              placeholder="Your name"
+              placeholder={this.props.text.contactTxt2}
             />
-            <p className="formText">Your e-mail:</p>
+            <p className="formText">{this.props.text.contactTxt3} </p>
             <input
               className="formInput"
               type="email"
               name="email"
-              placeholder="Your email"
+              placeholder={this.props.text.contactTxt3}
             />
-            <p className="formText">Message for me:</p>
+            <p className="formText"> {this.props.text.contactTxt4}</p>
             <textarea
               className="formTextArea"
               name="message"
-              placeholder="Your message"
+              placeholder={this.props.text.contactTxt4}
             />
             <button className="buttonSubmit" type="submit">
-              Send message
+              {this.props.text.contactTxt5}
             </button>
           </form>
         </div>

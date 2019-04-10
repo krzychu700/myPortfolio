@@ -23,7 +23,7 @@ class Menu extends Component {
         className="menu"
         ref="menu"
       >
-        {/* <Switcher /> */}
+        <Switcher />
         <ul className="menuList">
           <li className="menuItem">
             <a className="menuLink" href="#home">
@@ -32,22 +32,22 @@ class Menu extends Component {
           </li>
           <li className="menuItem">
             <a className="menuLink" href="#about">
-              About
+              {this.props.text.About}
             </a>
           </li>
           <li className="menuItem">
             <a className="menuLink" href="#skills">
-              Skills
+              {this.props.text.Skills}
             </a>
           </li>
           <li className="menuItem">
             <a className="menuLink" href="#projects">
-              Portfolio
+              {this.props.text.Portfolio}
             </a>
           </li>
           <li className="menuItem">
             <a className="menuLink" href="#contact">
-              Contact
+              {this.props.text.Contact}
             </a>
           </li>
           <li className="menuItem" onClick={this.props.langSwitcher}>

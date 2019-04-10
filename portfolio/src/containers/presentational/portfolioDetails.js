@@ -11,22 +11,22 @@ const PortfolioDetails = props => (
               key={item.id}
             >
               <p className="usedTechnologiesButton" onClick={props.click}>
-                Back
+                {props.text.button6}
               </p>
               <p className="projectName">{item.name}</p>
               <p className="projectDescription">{item.Description}</p>
               <p className="projectLive">
-                Live version:
+                {props.text.PortText1}
                 <a
                   style={{ display: "table-cell", margin: "0 10px" }}
                   href={`${item.LiveVersion}`}
                   target="_blank"
                 >
-                  {` SEE HERE`}
+                  {props.text.PortText2}
                 </a>
               </p>
               <p className="projectLive">
-                Code:
+                {props.text.PortText3}
                 <a
                   style={{ display: "table-cell" }}
                   href={`${item.Github}`}
@@ -36,7 +36,7 @@ const PortfolioDetails = props => (
                 </a>
               </p>
               <p className={item.GithubAPI ? "projectLive" : "projectHideInfo"}>
-                Code with API:
+                {props.text.PortText4}
                 <a
                   style={{ display: "table-cell" }}
                   href={`${item.GithubAPI}`}
