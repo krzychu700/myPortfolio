@@ -1,12 +1,254 @@
 // Styles set when in light mode
-body.light-mode {
-  background-color: #232323;
-  color: #dfdfdf;
 
-  .aboutSection {
-    background-color: red;
+$basic: #aa9e9e;
+$section: #6292bc;
+
+body.light-mode {
+  background-color: $basic;
+  color: black;
+
+  .menu {
+    background-color: $basic !important;
+
+    a {
+      color: black
+    }
   }
 
+  .menuItem {
+    background-color: $basic;
+    color: black;
+
+    &:hover {
+      color: white;
+      box-shadow: 0 0 30px 0 transparentize(white, 0.5);
+      background-color: $basic;
+      border: 2px solid $basic;
+      filter: drop-shadow(0 0 8px $basic);
+
+      a {
+        color: white
+      }
+    }
+  }
+
+  .scrollArea {
+    filter: grayscale(0) !important;
+    background-color: $basic;
+  }
+
+  .headerSection::after {
+    border-color: transparent transparent $basic transparent;
+  }
+
+  .nightSky {
+    background-color: #6292bc;
+    background-image: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 1000px;
+      top: 75px;
+      width: 100px;
+      height: 100px;
+      background: #ffffee;
+      border: 2px solid #ffddaa;
+      border-radius: 50%;
+      box-shadow: 0 0 100px 50px rgba(234, 153, 29, 0.75);
+    }
+  }
+
+  .cloud {
+    position: absolute;
+    position: absolute;
+    left: 812px;
+    top: -10px;
+    width: 450px;
+    height: 260px;
+    background-image: url("https://krzychu700.github.io/myPortfolio/img/cloud1.png");
+    animation: cloudAnim;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    background-size: cover;
+    animation-timing-function: linear;
+  }
+
+  .cloud2 {
+    position: absolute;
+    position: absolute;
+    left: 430px;
+    top: 355px;
+    width: 365px;
+    height: 135px;
+    background-image: url("https://krzychu700.github.io/myPortfolio/img/cloud2.png");
+    animation: cloudAnim;
+    animation-duration: 150s;
+    animation-iteration-count: infinite;
+    background-size: cover;
+    animation-timing-function: linear;
+  }
+
+  .cloud3 {
+    position: absolute;
+    position: absolute;
+    left: 112px;
+    top: 213px;
+    width: 169px;
+    height: 68px;
+    background-image: url("https://krzychu700.github.io/myPortfolio/img/cloud3.png");
+    animation: cloudAnim;
+    animation-duration: 190s;
+    animation-iteration-count: infinite;
+    background-size: cover;
+    animation-timing-function: linear;
+  }
+
+  .canvasSection::after {
+    border: none;
+  }
+
+  .aboutSection {
+    background-color: $section;
+    color: black;
+  }
+
+  .aboutSection::before {
+    border-color: transparent transparent $section transparent;
+  }
+
+  .aboutSection::after {
+    border-color: transparent $section transparent transparent;
+  }
+
+  .aboutUndeline {
+    border: 2px solid black;
+    filter: drop-shadow(0 0 8px black);
+  }
+
+  .hobbie {
+    background-color: black;
+    color: white;
+  }
+
+  .skillsSection {
+    background-color: $section;
+    color: black;
+  }
+
+  .skillsSection::before {
+    border-color: transparent transparent transparent $section;
+  }
+
+  .skillsSection::after {
+    border-color: $section transparent transparent transparent;
+  }
+
+  .skillsUndeline {
+    border: 2px solid black;
+    filter: drop-shadow(0 0 8px black);
+  }
+
+  .skillDescriptionArea {
+    background-color: black;
+  }
+
+  .coverflow__figure__3bk_C {
+    background: black;
+    color: white;
+  }
+
+  .portfolioSection {
+    background-color: $section;
+    color: black;
+  }
+
+  .portfolioSection::before {
+    border-color: transparent transparent $section transparent;
+  }
+
+  .portfolioSection::after {
+    border-color: transparent $section transparent transparent;
+  }
+
+  .portfolioUndeline {
+    border: 2px solid black;
+    filter: drop-shadow(0 0 8px black);
+  }
+
+  .usedTechnologiesButton {
+    border: 2px solid black;
+
+    &:hover {
+      color: white;
+      box-shadow: 0 0 30px 0 transparentize(white, 0.5);
+      background-color: $basic;
+      transition: all 0.2s ease-out;
+      filter: drop-shadow(0 0 8px $basic);
+    }
+  }
+
+  .textToGithub {
+    i {
+      color: black;
+    }
+  }
+
+  .examplesContainer {
+    background-color: black;
+  }
+
+  .portfolioDetailsArea {
+    background-color: black;
+    color: white;
+
+    .usedTechnologiesButton {
+      border: 2px solid white;
+    }
+  }
+
+  .contactSection {
+    background-color: $section;
+    color: black;
+  }
+
+  .contactSection::before {
+    border-color: transparent transparent transparent $section;
+  }
+
+  .contactSection::after {
+    border-color: $section transparent transparent transparent;
+  }
+
+  .contactUndeline {
+    border: 2px solid black;
+    filter: drop-shadow(0 0 8px black);
+  }
+
+  .buttonSubmit {
+    border: 2px solid $basic;
+    background-color: $basic;
+    color: black;
+
+
+    &:hover {
+      box-shadow: 0 0 30px 0 transparentize($basic, 0.5);
+      background-color: $basic;
+      transition: all 0.2s ease-out;
+      filter: drop-shadow(0 0 8px $basic);
+    }
+  }
+
+  .footeroSection {
+    background-color: $section;
+    color: black;
+  }
+
+  .footeroSection::before {
+    border-color: transparent transparent $section transparent;
+  }
+
+  //navbar
   .navbar {
     background-color: #1a1919;
   }
@@ -82,5 +324,15 @@ input[type='checkbox'].dmcheck {
     background: #fff;
     opacity: 0.9;
     background-color: #f6f6f6;
+  }
+}
+
+@keyframes cloudAnim {
+  from {
+    left: -50%;
+  }
+
+  to {
+    left: 120%;
   }
 }

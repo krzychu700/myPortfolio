@@ -18,7 +18,8 @@ class App extends Component {
       language: "en",
       text: En,
       portfolio: [...En.en],
-      data: En.en
+      data: En.en,
+      mode: true
     };
   }
 
@@ -26,6 +27,13 @@ class App extends Component {
     window.addEventListener("scroll", this.handleScroll.bind(this));
     this.menuNavigationScroll.bind(this);
   }
+
+  handleModeChange = () => {
+    console.log("asldk");
+    this.setState({
+      mode: !this.state.mode
+    });
+  };
 
   handleScroll() {
     const scrolPos = window.pageYOffset;
@@ -111,11 +119,14 @@ class App extends Component {
           langSwitcher={this.handleLanguage}
           text={this.state.text}
           language={this.state.language}
+          mode={this.state.mode}
+          handleModeChange={this.handleModeChange}
         />
         <Header
           scroll={this.state.scrolPos}
           text={this.state.text}
           language={this.state.language}
+          mode={this.state.mode}
         />
         <About scroll={this.state.scrolPos} text={this.state.text} />
         <Skills scroll={this.state.scrolPos} text={this.state.text} />

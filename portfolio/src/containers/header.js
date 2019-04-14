@@ -23,11 +23,18 @@ class Header extends Component {
           />
           <div className="nightSkyPic">
             <div className="nightSky" />
+            <div className="cloud" />
+            <div className="cloud2" />
+            <div className="cloud3" />
           </div>
           {this.props.language === "en" ? <TextEN /> : <TextPL />}
 
           <div className="canvasSection">
-            {this.props.scroll < 880 ? <Canvas /> : null}
+            {this.props.mode === false ? (
+              this.props.scroll < 880 ? (
+                <Canvas />
+              ) : null
+            ) : null}
           </div>
           <div className="bcgPicture">
             <img

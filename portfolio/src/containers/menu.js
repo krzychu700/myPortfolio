@@ -23,7 +23,10 @@ class Menu extends Component {
         className="menu"
         ref="menu"
       >
-        <Switcher />
+        <Switcher
+          mode={this.props.mode}
+          handleModeChange={this.props.handleModeChange}
+        />
         <ul className="menuList">
           <li className="menuItem">
             <a className="menuLink" href="#home">
@@ -51,7 +54,19 @@ class Menu extends Component {
             </a>
           </li>
           <li className="menuItem" onClick={this.props.langSwitcher}>
-            {this.props.language === "en" ? "PL" : "EN"}
+            {this.props.language === "pl" ? (
+              <img
+                src={process.env.PUBLIC_URL + "/img/gb.svg"}
+                className="flagIcon"
+                alt="en icon"
+              />
+            ) : (
+              <img
+                src={process.env.PUBLIC_URL + "/img/pl.svg"}
+                className="flagIcon"
+                alt="pl icon"
+              />
+            )}
           </li>
         </ul>
       </div>
